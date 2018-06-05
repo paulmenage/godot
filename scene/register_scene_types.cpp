@@ -153,6 +153,7 @@
 #include "scene/resources/video_stream.h"
 #include "scene/resources/world.h"
 #include "scene/resources/world_2d.h"
+#include "scene/resources/scene_importer_gltf.h"
 #include "scene/scene_string_names.h"
 
 #include "scene/3d/particles.h"
@@ -639,6 +640,8 @@ void register_scene_types() {
 			ERR_PRINTS("Error loading custom theme '" + theme_path + "'");
 		}
 	}
+
+        ClassDB::register_class<SceneImporterGLTF>();
 }
 
 void unregister_scene_types() {
